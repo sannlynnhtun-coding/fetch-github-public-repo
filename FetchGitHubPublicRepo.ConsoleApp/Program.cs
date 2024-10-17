@@ -15,7 +15,7 @@ try
         .Content
         .GetAllContentsByRef(owner, repo, path, branch);
     var repositoryContents = folderContents
-        //.Where(file => file.Type == Octokit.ContentType.File && file.Name.EndsWith(".json"))
+        .Where(file => file.Type == Octokit.ContentType.File && file.Name.EndsWith(".json"))
         .ToList();
     foreach (var repository in repositoryContents)
     {
