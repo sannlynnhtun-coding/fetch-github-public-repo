@@ -19,8 +19,11 @@ try
         .ToList();
     foreach (var repository in repositoryContents)
     {
-        var data = JsonConvert.DeserializeObject<JToken>(repository.Content)!;
-        Console.WriteLine(JsonConvert.SerializeObject(data, Formatting.Indented));
+        //var data = JsonConvert.DeserializeObject<JToken>(repository.Content)!;
+        //Console.WriteLine(JsonConvert.SerializeObject(data, Formatting.Indented));
+
+        Console.WriteLine(repository.Name);
+        Console.WriteLine(repository.Content);
     }
 }
 catch (Exception ex)
